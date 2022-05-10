@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    점수입력 : <input type="text" id="score">
+    <button onclick="grade()">성적 계산</button>
+    <div id="push">
+
+    </div>
+</body>
+<script>
+    function grade() {
+        let score1 = document.getElementById("score").value;
+        console.log(typeof score1)
+        score1 = parseInt(score1);
+        console.log(typeof score1)
+        let garde ="";
+        if(score1>=90){
+            grade = "A";
+        }else if(score1>=80){
+            grade = "B";
+        }else{
+            grade = "F";
+        }
+        const push1 = document.getElementById("push");
+        push1.innerHTML = grade;
+    }
+</script>
+</html>

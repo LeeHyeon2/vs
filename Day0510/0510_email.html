@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="text1">@<input type="text" id="text2">
+    <select id="mail" onchange="email()">
+        <option>선택</option>
+        <option value="naver.com">naver.com</option>
+        <option value="daum.net">daum.net</option>
+        <option value="kakao.com">kakao.com</option>
+        <option value="self">직접입력</option>
+    </select>
+</body>
+    <script>
+        function email() {
+            let choice = document.getElementById("mail").value; 
+            let mail1 = document.getElementById("text2");
+            console.log(choice);
+            mail1.innerHTML = `${choice}`; 
+            console.log(mail1);
+        }
+    </script>
+</html>
