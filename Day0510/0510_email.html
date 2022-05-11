@@ -7,22 +7,20 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" id="text1">@<input type="text" id="text2">
-    <select id="mail" onchange="email()">
-        <option>선택</option>
-        <option value="naver.com">naver.com</option>
-        <option value="daum.net">daum.net</option>
-        <option value="kakao.com">kakao.com</option>
-        <option value="self">직접입력</option>
+    <input type="text" id="email1">@ <input type="text" id="email2">
+    <select name="" id="domain" onchange="emailSelect()">
+        <option value="">직접입력</option>
+        <option value="naver.com">네이버</option>
+        <option value="gmail.com">지메일</option>
+        <option value="daum.net">다음</option>
     </select>
 </body>
     <script>
-        function email() {
-            let choice = document.getElementById("mail").value; 
-            let mail1 = document.getElementById("text2");
-            console.log(choice);
-            mail1.innerHTML = `${choice}`; 
-            console.log(mail1);
+        function emailSelect() {
+            const domain = document.getElementById("domain");
+            const domainValue = document.getElementById("domain").value;
+            const email2 = document.getElementById("email2");
+            email2.value = domainValue;
         }
     </script>
 </html>
